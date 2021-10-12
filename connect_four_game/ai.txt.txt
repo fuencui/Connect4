@@ -1,0 +1,41 @@
+# Fuen Cui GitHub:
+# https://github.ccs.neu.edu/CS-5001-SEA-Spring2021/student-FuenCui.git
+
+Did you attempt to make your computer player very smart -- i.e., do something more clever than just pick a random legal move?
+	Yes, I make two methods to deal with the AI's defensive and offensive moves.
+	The first method is called computer_AI_3 to check if there is a move to make the player or AI win.
+	it will select defensive or offensive moves
+	The second method is called computer_AI_2 running after the first move if there is no further risk if ai to losing the game.
+	Ai will develop its own moves to win the game or keep make defensive
+
+If so, were you able to accomplish this? Is your computer player as smart as you would like?
+	I did a lot of testing and debugging. I was very pleased with the performance of the AI
+
+How did you determine which piece to play next? Tell us about your “pick next move” algorithm
+	First of all, Ai will make a defensive move if there is no other AI disk
+	then, It will check is there a consecutive three disk on a row or consecutive three disks on a column
+		if so, AI will win the game
+	if not, It will check is there a consecutive three disk on a row or consecutive three disks on a column
+		if consecutive three disks on a column, AI will defensive
+		if consecutive three disks on a row
+			Ai will check if there is a blocked disk on either side, then
+			Ai will defensive
+			it will check the disk is valid before, in other words, the disk will dropping to the same row.
+	AI also know how to block the middle position of contiguous rows to be formed
+		if the first, the second, and the fourth player disk of a row are formed, AI will drop the third empty seat
+	If there is no further move to decided to victory
+		AI will check all two consecutive disk on a row or column, and AI will defend
+	if there is no further two consecutive disk
+		Ai will check if AI has two consecutive disk opportunity to expand the advantage
+		Ai will make an offensive move
+	if there is no opportunity for AI offensive
+		Ai will find create a random choice
+
+How often did your computer program beat you, or your friends, or whoever tested it out for you?
+	The AI  beats me very often if I play carelessly. I give to my friends and they won't beat AI as well.
+	However, since I creat this logic I know the flaws of this AI 
+	I can take advantage of diagonal lines to defeat the AI (AI can't deal with diagonal)
+
+How would you improve it in the future?
+	I could add the ability to AI handle diagonals. all the architecture has been written 
+	and it just needed to keep adding functionality in the method
